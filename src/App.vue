@@ -28,6 +28,9 @@
 
         methods: {
             newQuote(quote) {
+                if (this.quotes.length >= this.maxQuotes) {
+                    return alert('Please delete quotes first.')
+                }
                 this.quotes.push(quote)
             },
 
